@@ -25,7 +25,7 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
 
     let titleLabel: UILabel = {
         let view = UILabel.init()
-        view.text = "スクリーン1"
+        view.text = "スクリーン11"
         view.translatesAutoresizingMaskIntoConstraints = false // NSLayoutConstraintの利用に必要
         return view
     }()
