@@ -22,6 +22,7 @@
 		41C63A9628A5E6FB001F2964 /* OutcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */; };
 		41C63A9828A5E71D001F2964 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A9728A5E71D001F2964 /* DataViewController.swift */; };
 		41C63A9A28A6379B001F2964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C63A9928A6379B001F2964 /* Assets.xcassets */; };
+		41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A9C28A68A29001F2964 /* SettingPresenter.swift */; };
 		ADBC92F57256527EB184B280 /* Pods_EnglishApp_EnglishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238B741A2F0FAC17E98CED02 /* Pods_EnglishApp_EnglishAppUITests.framework */; };
 		C08A81E519C36D5E4FB43B4F /* Pods_EnglishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAB01E12F797134954BCCB /* Pods_EnglishApp.framework */; };
 		FDD5CE13115074CA26FB5B31 /* Pods_EnglishAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */; };
@@ -67,6 +68,7 @@
 		41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeViewController.swift; sourceTree = "<group>"; };
 		41C63A9728A5E71D001F2964 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		41C63A9928A6379B001F2964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41C63A9C28A68A29001F2964 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B41848A4B3ACED4DF143CAC /* Pods-EnglishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishAppTests/Pods-EnglishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8D0278582D3C82599ABCB7 /* Pods-EnglishApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +130,7 @@
 		41C63A5228A5E5EE001F2964 /* EnglishApp */ = {
 			isa = PBXGroup;
 			children = (
-				41C63A8428A5E610001F2964 /* Models */,
-				41C63A8328A5E610001F2964 /* Presenters */,
+				41C63A9B28A68892001F2964 /* Presenters */,
 				41C63A8528A5E618001F2964 /* Views */,
 				41C63A5328A5E5EE001F2964 /* AppDelegate.swift */,
 				41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */,
@@ -159,20 +160,6 @@
 			path = EnglishAppUITests;
 			sourceTree = "<group>";
 		};
-		41C63A8328A5E610001F2964 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		41C63A8428A5E610001F2964 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		41C63A8528A5E618001F2964 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +179,14 @@
 				41C63A8A28A5E618001F2964 /* TabBarController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41C63A9B28A68892001F2964 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				41C63A9C28A68A29001F2964 /* SettingPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		98BFF79EB5B9EEFFD2556E86 /* Pods */ = {
@@ -461,6 +456,7 @@
 				41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */,
 				41C63A9628A5E6FB001F2964 /* OutcomeViewController.swift in Sources */,
 				41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */,
+				41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */,
 				41C63A9028A5E618001F2964 /* TabBarController.swift in Sources */,
 				41C63A8D28A5E618001F2964 /* SettingViewController.swift in Sources */,
 				41C63A8F28A5E618001F2964 /* UIColor+.swift in Sources */,

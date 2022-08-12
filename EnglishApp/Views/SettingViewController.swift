@@ -38,6 +38,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
+    private var presenter: SettingPresenterProtocol
     private var collectionView: UICollectionView!
     private var collectionViewLayout: UICollectionViewLayout { // 画面上にどのように配置するか決定する
         UICollectionViewCompositionalLayout { _, layoutEnvironment in
@@ -55,16 +56,11 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
     private var dataSource: UICollectionViewDiffableDataSource<Section, SectionItem>!// データをUIに紐づけて表示するクラス(第一引数: Section, 第二引数: Cell)
     private var cancellables: Set<AnyCancellable> = []
     
-    // NOTE: presenterができてから
-    //    required init(_ presenter: SettingsPresenterProtocol = SettingsPresenter()) {
-    //        self.presenter = presenter
-    //        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
-    //    }
-    //
-    //    @available(*, unavailable)
-    //    required init?(coder: NSCoder) {
-    //        fatalError("init(coder:) has not been implemented")
-    //    }
+    // REFER: https://stackoverflow.com/questions/70439910/thread-1-fatal-error-initcoder-has-not-been-implemented
+    required init?(coder: NSCoder) {
+        self.presenter = SettingPresenter()
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,7 +134,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
                 cell.contentConfiguration = content
                 cell.accessories = [
                     .label(
-                        text: "---", // ここは自動更新できるようにアルゴリズムを更新
+                        text: self.presenter.versionNumber, // ここは自動更新できるようにアルゴリズムを更新
                         displayed: .always,
                         options: .init(tintColor: .pastelRed, font: .systemFont(ofSize: 13))
                     )
