@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j8l-zq-oh9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data View Controller-->
+        <scene sceneID="1Eb-uX-74n">
+            <objects>
+                <viewController id="W52-RT-8iW" customClass="DataViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hVW-xP-RhM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oQG-Uy-8VY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m5P-Cy-4xz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffZ-Nb-gNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505.7971014492755" y="-50.223214285714285"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="JAk-HE-S9h">
+            <objects>
+                <viewController id="Lwh-9M-MD9" customClass="SettingViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6W-3q-2YK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lrB-CE-204"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZmH-r8-YeC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRu-HS-bHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505.7971014492755" y="667.63392857142856"/>
+        </scene>
+        <!--Outcome View Controller-->
+        <scene sceneID="80i-eI-b3Z">
+            <objects>
+                <viewController id="3jo-st-LVM" customClass="OutcomeViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bKR-hW-Ace">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="St7-OW-Uxz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7ce-7Q-fqH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRc-0d-Ugo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505.7971014492755" y="-734.59821428571422"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6u8-hL-P0u">
+            <objects>
+                <tabBarController id="j8l-zq-oh9" customClass="TabBarController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ts8-Ph-6Gj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h8a-FW-CdY" kind="relationship" relationship="viewControllers" id="MmJ-24-hLG"/>
+                        <segue destination="VZg-ie-ycu" kind="relationship" relationship="viewControllers" id="hiV-NL-COK"/>
+                        <segue destination="CIv-vV-DwW" kind="relationship" relationship="viewControllers" id="TFH-6S-QLQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQ4-ip-sNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="-50"/>
+        </scene>
+        <!--学習-->
+        <scene sceneID="YhL-M4-PP5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8a-FW-CdY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="学習" image="pencil" catalog="system" id="Ojh-aW-hCg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vh0-ro-Nyo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3jo-st-LVM" kind="relationship" relationship="rootViewController" id="LAB-QZ-BKq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tr-Hb-FHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595.6521739130435" y="-734.59821428571422"/>
+        </scene>
+        <!--学習記録-->
+        <scene sceneID="sKM-vu-Ib2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZg-ie-ycu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="学習記録" image="book.closed" catalog="system" id="FG1-rf-O1g"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cfj-MM-K5w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W52-RT-8iW" kind="relationship" relationship="rootViewController" id="F8v-3z-Gfa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="neQ-0y-JUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595.6521739130435" y="-50.223214285714285"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="dTc-69-ywv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CIv-vV-DwW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="設定" image="gearshape" catalog="system" id="ECW-S0-zbA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ow9-S7-TsT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lwh-9M-MD9" kind="relationship" relationship="rootViewController" id="emy-xN-2dN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgK-Li-EZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595.6521739130435" y="667.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
