@@ -1,0 +1,19 @@
+excluded: # Lintの対象から外すファイル
+  - Pods
+
+identifier_name: # 変数名に関する制約．記載した短い変数名を許容
+  excluded:
+    - id
+    - vc
+
+disabled_rules: # 無効にするルール
+  - force_try
+  - trailing_comma
+  - identifier_name
+  - function_body_length
+  - type_body_length
+  - force_cast
+  - file_length
+  - type_name
+  - line_length
+

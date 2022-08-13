@@ -41,9 +41,9 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(collectionView)
         collectionView.delegate = self
-        
+
         view.addSubview(titleLabel)
-        
+
         NSLayoutConstraint.activate([
             titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)

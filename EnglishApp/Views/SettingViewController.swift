@@ -9,10 +9,10 @@ import Combine
 import UIKit
 
 final class SettingViewController: UIViewController, UICollectionViewDelegate {
-    
+
     enum Section: Int, CaseIterable {
         case aboutApp, other
-        var title:String {
+        var title: String {
             switch self {
             case .aboutApp:
                 return "アプリについて"
@@ -21,7 +21,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
             }
         }
     }
-    
+
     enum SectionItem: Int, CaseIterable {
         case review, share, hint, version
         var title: String {
@@ -37,13 +37,13 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
             }
         }
     }
-    
+
     private var presenter: SettingPresenterProtocol
     private var collectionView: UICollectionView!
     private var collectionViewLayout: UICollectionViewLayout { // 画面上にどのように配置するか決定する
         UICollectionViewCompositionalLayout { _, layoutEnvironment in
             var configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
-            configuration.headerMode = .supplementary //header = Section
+            configuration.headerMode = .supplementary // header = Section
             configuration.backgroundColor = .pastelRed // ここの色は変更
             let section = NSCollectionLayoutSection.list(// 指定されたリスト構成とレイアウト環境でリストセクションを作成
                 using: configuration,
@@ -52,16 +52,16 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
             return section
         }
     }
-    
+
     private var dataSource: UICollectionViewDiffableDataSource<Section, SectionItem>!// データをUIに紐づけて表示するクラス(第一引数: Section, 第二引数: Cell)
     private var cancellables: Set<AnyCancellable> = []
-    
+
     // REFER: https://stackoverflow.com/questions/70439910/thread-1-fatal-error-initcoder-has-not-been-implemented
     required init?(coder: NSCoder) {
         self.presenter = SettingPresenter()
         super.init(coder: coder)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "設定"
@@ -70,7 +70,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         setupDataSource()
         configureDatasource()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true) // アイテムの指定
         guard let sectionItem = dataSource.itemIdentifier(for: indexPath) else { return }
@@ -86,26 +86,26 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
             print("dddddd")
         }
     }
-    
+
     private func reloadItem(_ sectionItem: SectionItem) {
         var snapshot = dataSource.snapshot()
         snapshot.reloadItems([sectionItem])
-        dataSource.apply(snapshot) //UIの変更を反映
+        dataSource.apply(snapshot) // UIの変更を反映
     }
-    
+
     private func reloadSection(_ section: Section) {
         var snapshot = dataSource.snapshot()
         snapshot.reloadSections([section])
         dataSource.apply(snapshot, animatingDifferences: true)
     }
-    
+
     private func setupHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout) // viewのサイズを画面サイズに合わせて被せる
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // 画面サイズ，向きが変わっても自動でサイズ調整
         view.addSubview(collectionView)
         collectionView.delegate = self // collectionViewでアクションが起きたときにselfに問い合わせ
     }
-    
+
     private func setupDataSource() {
         let other: UICollectionView.CellRegistration<UICollectionViewListCell, SectionItem> // セルの型，モデルの型の指定
         other = .init { [weak self] cell, _, item in
@@ -142,7 +142,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
                 cell.automaticallyUpdatesBackgroundConfiguration = false
             }
         }
-        
+
         // 以下でセルを定義 cellProvider→ビューの各セルを作成して返すクロージャー
         dataSource = .init(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             switch item {
@@ -151,7 +151,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
                     .dequeueConfiguredReusableCell(using: other, for: indexPath, item: item) // セルオブジェクトを返す
             }
         })
-        
+
         let header = UICollectionView.SupplementaryRegistration // セルのheaderを作成
         <UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) { (cell, _, indexPath) in
             var config = UIListContentConfiguration.groupedHeader()
@@ -163,7 +163,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
             }
             cell.contentConfiguration = config
         }
-        
+
         dataSource.supplementaryViewProvider = .init { collectionView, _, indexPath in
             switch Section(rawValue: indexPath.section)! {
             default:
@@ -172,7 +172,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
             }
         }
     }
-    
+
     // ここでセルの情報を追加
     private func configureDatasource() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, SectionItem>()
