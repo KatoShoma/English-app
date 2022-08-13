@@ -29,7 +29,7 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         view.translatesAutoresizingMaskIntoConstraints = false // NSLayoutConstraintの利用に必要
         return view
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false) // ナビゲーションバーを非表示にする
