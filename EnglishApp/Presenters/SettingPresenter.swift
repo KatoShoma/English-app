@@ -21,20 +21,20 @@ final class SettingPresenter: SettingPresenterProtocol {
     var versionNumber: String {
         return "1.0.0" // NOTE: 後々，自動取得にする
     }
-    
+
     init() {
     }
-    
+
     func reviewDidTap() {
         print("review")
     }
-    
+
     func shareDidTap() {
         print("share")
     }
-    
+
     func hintDidTap() {
         print("hint")
     }
-    
+
 }

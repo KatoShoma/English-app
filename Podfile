@@ -10,6 +10,7 @@ target 'EnglishApp' do
 
   # Pods for EnglishApp
   pod 'RealmSwift'
+  pod 'SwiftLint'
 
   target 'EnglishAppTests' do
     inherit! :search_paths
