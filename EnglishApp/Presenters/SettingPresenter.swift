@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 protocol SettingPresenterProtocol {
-    
+
     var versionNumber: String { get }
-    
+
     func reviewDidTap()
     func shareDidTap()
     func hintDidTap()
