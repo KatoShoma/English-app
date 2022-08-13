@@ -1,19 +1,14 @@
 name: Swift
 
-on:
-  push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
+on: [pull_request]
 
 jobs:
-  build:
-
+  danger:
     runs-on: macos-latest
-
     steps:
     - uses: actions/checkout@v3
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - run: bundle install
+    - name: Run Lint
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: bundle exec fastlane run_lint

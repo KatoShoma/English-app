@@ -1,0 +1,19 @@
+excluded:
+  - Pods
+
+identifier_name:
+  excluded:
+    - id
+    - vc
+
+disabled_rules:
+  - force_try
+  - trailing_comma
+  - identifier_name
+  - function_body_length
+  - type_body_length
+  - force_cast
+  - file_length
+  - type_name
+  - line_length
+
