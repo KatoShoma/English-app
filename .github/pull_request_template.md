@@ -1,4 +1,4 @@
-### ticket url
+### ticket URL
 
 ### summary
 
