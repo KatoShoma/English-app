@@ -77,13 +77,13 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         // 以下，セルを押した場合の処理
         switch sectionItem {
         case .review:
-            print("aaaaaa")
+            presenter.reviewDidTap()
         case .share:
-            print("bbbbbb")
+            presenter.shareDidTap()
         case .hint:
-            print("cccccc")
+            presenter.hintDidTap()
         case .version:
-            print("dddddd")
+            break
         }
     }
 
