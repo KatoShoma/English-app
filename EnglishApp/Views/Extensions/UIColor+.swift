@@ -15,11 +15,11 @@ extension UIColor {
     // 黒
     static let lightBlack = UIColor(hex: "#323232")
     // オレンジ
-    static let Sandybrown = UIColor(hex: "#FFA463")
+    static let sandyBrown = UIColor(hex: "#FFA463")
     // 青
-    static let SafeColor = UIColor(hex: "1FA5DF")
+    static let safeColor = UIColor(hex: "1FA5DF")
     // シルバー
-    static let Silver = UIColor(hex: "#C4C4C4")
+    static let silver = UIColor(hex: "#C4C4C4")
 
     //  色をhexで編集できるように修正
     convenience init?(hex: String, alpha: CGFloat = 1.0) {
