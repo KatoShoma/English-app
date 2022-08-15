@@ -10,9 +10,16 @@ import UIKit
 extension UIColor {
 
     // 以下で拡張色の定義
+    // 赤
     static let pastelRed = UIColor(hex: "#FF9999")
-
+    // 黒
     static let lightBlack = UIColor(hex: "#323232")
+    // オレンジ
+    static let Sandybrown = UIColor(hex: "#FFA463")
+    // 青
+    static let SafeColor = UIColor(hex: "1FA5DF")
+    // シルバー
+    static let Silver = UIColor(hex: "#C4C4C4")
 
     //  色をhexで編集できるように修正
     convenience init?(hex: String, alpha: CGFloat = 1.0) {
