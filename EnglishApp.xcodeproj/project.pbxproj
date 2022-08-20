@@ -130,8 +130,8 @@
 		41C63A5228A5E5EE001F2964 /* EnglishApp */ = {
 			isa = PBXGroup;
 			children = (
-				41C63A9B28A68892001F2964 /* Presenters */,
 				41C63A8528A5E618001F2964 /* Views */,
+				41C63A9B28A68892001F2964 /* Presenters */,
 				41C63A5328A5E5EE001F2964 /* AppDelegate.swift */,
 				41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */,
 				41C63A5728A5E5EE001F2964 /* ViewController.swift */,
@@ -163,10 +163,10 @@
 		41C63A8528A5E618001F2964 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41CC156728B13A0E00E23B7F /* Setting */,
+				41CC156628B139EB00E23B7F /* Data */,
+				41CC156528B139DA00E23B7F /* Study */,
 				41C63A8728A5E618001F2964 /* Extensions */,
-				41C63A8628A5E618001F2964 /* SettingViewController.swift */,
-				41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */,
-				41C63A9728A5E71D001F2964 /* DataViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +187,30 @@
 				41C63A9C28A68A29001F2964 /* SettingPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		41CC156528B139DA00E23B7F /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		41CC156628B139EB00E23B7F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				41C63A9728A5E71D001F2964 /* DataViewController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		41CC156728B13A0E00E23B7F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				41C63A8628A5E618001F2964 /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		98BFF79EB5B9EEFFD2556E86 /* Pods */ = {
