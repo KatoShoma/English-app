@@ -37,7 +37,7 @@ extension UIColor {
     // ブロンズ
     static let bronze = UIColor(hex: "#DF7756")
     // 設定
-    static let settingPink = UIColor(hex: "FFF4F9")
+    static let settingPink = UIColor(hex: "#FFF4F9")
 
     // 色をhexで編集できるように修正
     convenience init?(hex: String, alpha: CGFloat = 1.0) {
