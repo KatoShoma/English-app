@@ -44,7 +44,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         UICollectionViewCompositionalLayout { _, layoutEnvironment in
             var configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
             configuration.headerMode = .supplementary // header = Section
-            configuration.backgroundColor = .pastelRed // ここの色は変更
+            configuration.backgroundColor = .settingPink
             let section = NSCollectionLayoutSection.list(// 指定されたリスト構成とレイアウト環境でリストセクションを作成
                 using: configuration,
                 layoutEnvironment: layoutEnvironment
