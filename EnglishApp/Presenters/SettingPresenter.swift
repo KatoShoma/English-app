@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 protocol SettingPresenterProtocol {
 
@@ -26,7 +27,9 @@ final class SettingPresenter: SettingPresenterProtocol {
     }
 
     func reviewDidTap() {
-        print("review")
+        // NOTE: URL変える
+        guard let url = URL(string: "https://qiita.com/SNQ-2001/items/570cd4d63d07ed0cad88") else { return }
+        UIApplication.shared.open(url, options: [:])
     }
 
     func shareDidTap() {
