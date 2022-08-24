@@ -12,7 +12,7 @@ class NavigationBarController {
 
     static func customNavigationBar() {
 
-        let textColor: UIColor = UIColor.lightBlack! // 文字色の指定
+        let textColor: UIColor = UIColor.lightBlack // 文字色の指定
         let backgroundColor: UIColor = UIColor.white // 背景色の指定
 
         // 全てのNavigation Barの色を変更する

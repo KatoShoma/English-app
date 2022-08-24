@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let textColor: UIColor = UIColor.lightBlack! // 文字色の指定
+        let textColor: UIColor = UIColor.lightBlack // 文字色の指定
         let backgroundColor: UIColor = UIColor.white // 背景色の指定
 
         let tabBarAppearance = UITabBarAppearance()

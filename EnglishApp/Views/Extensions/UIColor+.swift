@@ -11,33 +11,33 @@ extension UIColor {
 
     // 以下で拡張色の定義
     // 黒
-    static let lightBlack = UIColor(hex: "#323232")
+    static let lightBlack = UIColor(hex: "#323232")!
     // 赤
-    static let pastelRed = UIColor(hex: "#FF9999")
+    static let pastelRed = UIColor(hex: "#FF9999")!
     // 背景(白)
-    static let backGround = UIColor(hex: "#FFFFFF")
+    static let backGround = UIColor(hex: "#FFFFFF")!
     // 画面下部の白みの強いグレー
-    static let lightGray = UIColor(hex: "#F5F4F4")
+    static let lightGray = UIColor(hex: "#F5F4F4")!
     // 調理開始
-    static let startOrange = UIColor(hex: "#DF7756")
+    static let startOrange = UIColor(hex: "#DF7756")!
     // 時間の設定
-    static let timerBlue = UIColor(hex: "#ACCDFF")
+    static let timerBlue = UIColor(hex: "#ACCDFF")!
     // タイトルに戻る
-    static let returnGray = UIColor(hex: "#C4C4C4")
+    static let returnGray = UIColor(hex: "#C4C4C4")!
     // ドラムピッカー・苦手単語・学習回数・最高正答数
-    static let timerGray = UIColor(hex: "#D9D9D9")
+    static let timerGray = UIColor(hex: "#D9D9D9")!
     // ランクボタン
-    static let rankCream = UIColor(hex: "#FFEAD1")
+    static let rankCream = UIColor(hex: "#FFEAD1")!
     // 保存・キャンセルボタン・ランクとは
-    static let lightBlue = UIColor(hex: "#0AC4FF")
+    static let lightBlue = UIColor(hex: "#0AC4FF")!
     // ゴールド
-    static let gold = UIColor(hex: "#BFAB40")
+    static let gold = UIColor(hex: "#BFAB40")!
     // シルバー
-    static let silver = UIColor(hex: "#7C7979")
+    static let silver = UIColor(hex: "#7C7979")!
     // ブロンズ
-    static let bronze = UIColor(hex: "#DF7756")
+    static let bronze = UIColor(hex: "#DF7756")!
     // 設定
-    static let settingPink = UIColor(hex: "#FFF4F9")
+    static let settingPink = UIColor(hex: "#FFF4F9")!
 
     // 色をhexで編集できるように修正
     convenience init?(hex: String, alpha: CGFloat = 1.0) {

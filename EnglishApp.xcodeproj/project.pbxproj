@@ -23,6 +23,8 @@
 		41C63A9828A5E71D001F2964 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A9728A5E71D001F2964 /* DataViewController.swift */; };
 		41C63A9A28A6379B001F2964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C63A9928A6379B001F2964 /* Assets.xcassets */; };
 		41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A9C28A68A29001F2964 /* SettingPresenter.swift */; };
+		41CC156A28B4AC4F00E23B7F /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC156928B4AC4F00E23B7F /* OutcomeView.swift */; };
+		41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */; };
 		ADBC92F57256527EB184B280 /* Pods_EnglishApp_EnglishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238B741A2F0FAC17E98CED02 /* Pods_EnglishApp_EnglishAppUITests.framework */; };
 		C08A81E519C36D5E4FB43B4F /* Pods_EnglishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAB01E12F797134954BCCB /* Pods_EnglishApp.framework */; };
 		FDD5CE13115074CA26FB5B31 /* Pods_EnglishAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */; };
@@ -69,6 +71,8 @@
 		41C63A9728A5E71D001F2964 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		41C63A9928A6379B001F2964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41C63A9C28A68A29001F2964 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
+		41CC156928B4AC4F00E23B7F /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
+		41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B41848A4B3ACED4DF143CAC /* Pods-EnglishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishAppTests/Pods-EnglishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8D0278582D3C82599ABCB7 /* Pods-EnglishApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		41C63A8528A5E618001F2964 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41CC157328B5221E00E23B7F /* Components */,
 				41CC156728B13A0E00E23B7F /* Setting */,
 				41CC156628B139EB00E23B7F /* Data */,
 				41CC156528B139DA00E23B7F /* Study */,
@@ -177,6 +182,7 @@
 				41C63A8828A5E618001F2964 /* NavigationBarController.swift */,
 				41C63A8928A5E618001F2964 /* UIColor+.swift */,
 				41C63A8A28A5E618001F2964 /* TabBarController.swift */,
+				41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */,
+				41CC156928B4AC4F00E23B7F /* OutcomeView.swift */,
+				41CC156D28B51A1200E23B7F /* UIViews */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -211,6 +219,20 @@
 				41C63A8628A5E618001F2964 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		41CC156D28B51A1200E23B7F /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		41CC157328B5221E00E23B7F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		98BFF79EB5B9EEFFD2556E86 /* Pods */ = {
@@ -493,11 +515,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41CC156A28B4AC4F00E23B7F /* OutcomeView.swift in Sources */,
 				41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */,
 				41C63A8E28A5E618001F2964 /* NavigationBarController.swift in Sources */,
 				41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */,
 				41C63A9628A5E6FB001F2964 /* OutcomeViewController.swift in Sources */,
 				41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */,
+				41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */,
 				41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */,
 				41C63A9028A5E618001F2964 /* TabBarController.swift in Sources */,
 				41C63A8D28A5E618001F2964 /* SettingViewController.swift in Sources */,

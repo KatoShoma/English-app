@@ -6,48 +6,33 @@
 //
 
 import UIKit
+import SwiftUI
 
 class OutcomeViewController: UIViewController, UICollectionViewDelegate {
 
-    private var collectionView: UICollectionView!
-    private var collectionViewLayout: UICollectionViewLayout {
-        UICollectionViewCompositionalLayout { _, layoutEnvironment in
-            var configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
-            configuration.headerMode = .supplementary
-            configuration.backgroundColor = .white
-            let section = NSCollectionLayoutSection.list(
-                using: configuration,
-                layoutEnvironment: layoutEnvironment
-            )
-            return section
-        }
-    }
+    private let hosting = UIHostingController(rootView: OutcomeView())
 
-    let titleLabel: UILabel = {
-        let view = UILabel.init()
-        view.text = "スクリーン1"
-        view.translatesAutoresizingMaskIntoConstraints = false // NSLayoutConstraintの利用に必要
-        return view
-    }()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false) // ナビゲーションバーを非表示にする
+        title = "学習"
         setupHierarchy()
+
+        hosting.rootView.model.startLearning = {
+            // NOTE: 関数の中身を記載
+        }
+        hosting.rootView.model.showTimeSettingView = {
+            // NOTE: 関数の中身を記載
+        }
     }
 
-    private func setupHierarchy() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-
-        view.addSubview(titleLabel)
-
-        NSLayoutConstraint.activate([
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
+    func setupHierarchy() {
+        self.addChild(hosting)
+        self.view.addSubview(hosting.view)
+        hosting.didMove(toParent: self)
+        hosting.view.equalConstraintTo(view)
     }
-
 }
