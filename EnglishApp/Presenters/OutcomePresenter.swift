@@ -6,21 +6,11 @@
 //
 
 protocol OutcomePresenterProtocol {
-    func studyDidTap()
-    func timeDidTap()
+
 }
 
 final class OutcomePresenter: OutcomePresenterProtocol {
-    
-    init(){
-        
-    }
-    
-    func studyDidTap() {
-        
-    }
-    
-    func timeDidTap() {
-        
+    init() {
+
     }
 }

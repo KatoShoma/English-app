@@ -9,10 +9,11 @@ import UIKit
 import SwiftUI
 
 class OutcomeViewController: UIViewController, UICollectionViewDelegate {
-
+    let presenter: OutcomePresenter
     private let hosting = UIHostingController(rootView: OutcomeView())
 
     required init?(coder: NSCoder) {
+        self.presenter = OutcomePresenter()
         super.init(coder: coder)
     }
 
@@ -22,10 +23,10 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         setupHierarchy()
 
         hosting.rootView.model.startLearning = {
-            // NOTE: 関数の中身を記載
+
         }
-        hosting.rootView.model.showTimeSettingView = {
-            // NOTE: 関数の中身を記載
+        hosting.rootView.model.showTimeSettingView = { [weak self] in
+            self?.present(UINavigationController(rootViewController: SetTimeViewController()), animated: true, completion: nil)
         }
     }
 
