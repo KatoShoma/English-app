@@ -32,7 +32,7 @@ class DataViewController: UIViewController, UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "学習記録"
+        title = "記録"
         navigationItem.largeTitleDisplayMode = .never
         setupHierarchy()
     }
