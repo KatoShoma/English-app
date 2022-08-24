@@ -69,6 +69,7 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         setupHierarchy()
         setupDataSource()
         configureDatasource()
+        subscribePresenterSubjects()
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -77,19 +78,35 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         // 以下，セルを押した場合の処理
         switch sectionItem {
         case .review:
-            // NOTE: URL変える
-            guard let url = URL(string: "https://qiita.com/SNQ-2001/items/570cd4d63d07ed0cad88") else { return }
-            UIApplication.shared.open(url, options: [:])
+            presenter.reviewDidTap()
         case .share:
-            let url = URL(string: "https://qiita.com/SNQ-2001/items/570cd4d63d07ed0cad88")!
-            let items = [url]
-            let shareVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
-            self.present(shareVc, animated: true, completion: nil)
+            presenter.shareDidTap()
         case .hint:
             presenter.hintDidTap()
         case .version:
             break
         }
+    }
+
+    private func subscribePresenterSubjects() {
+        presenter.onOpenURL
+            .receive(on: DispatchQueue.main)
+            .sink { url in
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                } else {
+                    print("画面遷移でエラーが発生しました")
+                }
+            }
+            .store(in: &cancellables)
+        presenter.onOpenShareURL
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] url in
+                let items = [url]
+                let shareVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                self?.present(shareVC, animated: true, completion: nil)
+            }
+            .store(in: &cancellables)
     }
 
     private func reloadItem(_ sectionItem: SectionItem) {
