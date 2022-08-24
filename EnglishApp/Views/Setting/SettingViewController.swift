@@ -77,9 +77,14 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         // 以下，セルを押した場合の処理
         switch sectionItem {
         case .review:
-            presenter.reviewDidTap()
+            // NOTE: URL変える
+            guard let url = URL(string: "https://qiita.com/SNQ-2001/items/570cd4d63d07ed0cad88") else { return }
+            UIApplication.shared.open(url, options: [:])
         case .share:
-            presenter.shareDidTap()
+            let url = URL(string: "https://qiita.com/SNQ-2001/items/570cd4d63d07ed0cad88")!
+            let items = [url]
+            let shareVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            self.present(shareVc, animated: true, completion: nil)
         case .hint:
             presenter.hintDidTap()
         case .version:
