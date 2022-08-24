@@ -27,6 +27,7 @@
 		41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */; };
 		41CC157B28B5CA7800E23B7F /* OutcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */; };
 		41CC157D28B5CEE400E23B7F /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */; };
+		636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */; };
 		ADBC92F57256527EB184B280 /* Pods_EnglishApp_EnglishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238B741A2F0FAC17E98CED02 /* Pods_EnglishApp_EnglishAppUITests.framework */; };
 		C08A81E519C36D5E4FB43B4F /* Pods_EnglishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAB01E12F797134954BCCB /* Pods_EnglishApp.framework */; };
 		FDD5CE13115074CA26FB5B31 /* Pods_EnglishAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */; };
@@ -77,6 +78,7 @@
 		41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomePresenter.swift; sourceTree = "<group>"; };
 		41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
+		636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
 		8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B41848A4B3ACED4DF143CAC /* Pods-EnglishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishAppTests/Pods-EnglishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8D0278582D3C82599ABCB7 /* Pods-EnglishApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */,
 				41CC156928B4AC4F00E23B7F /* OutcomeView.swift */,
 				41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */,
+				636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */,
 				41CC156D28B51A1200E23B7F /* UIViews */,
 			);
 			path = Study;
@@ -529,6 +532,7 @@
 				41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */,
 				41CC157D28B5CEE400E23B7F /* SetTimeViewController.swift in Sources */,
 				41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */,
+				636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */,
 				41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */,
 				41C63A9028A5E618001F2964 /* TabBarController.swift in Sources */,
 				41C63A8D28A5E618001F2964 /* SettingViewController.swift in Sources */,

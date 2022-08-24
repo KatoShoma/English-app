@@ -11,12 +11,13 @@ import SwiftUI
 class SetTimeViewController: UIViewController {
     required init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
-        let hosting = UIHostingController(rootView: OutcomeView())
+        let hosting = UIHostingController(rootView: SetTimeView())
         addChild(hosting)
         view.addSubview(hosting.view)
         hosting.didMove(toParent: self)
         hosting.view.equalConstraintTo(view)
         title = "時間の設定"
+        // キャンセル・保存ボタン navigationViewController(?)
     }
 
     required init?(coder: NSCoder) {
