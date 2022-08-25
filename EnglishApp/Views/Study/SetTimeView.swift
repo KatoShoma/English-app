@@ -19,7 +19,6 @@ struct SetTimeView: View {
         .labelsHidden()
         .background(Color(UIColor.timerGray))
         .pickerStyle(WheelPickerStyle())
-        Text("\(selection + 1)分")
     }
 }
 
