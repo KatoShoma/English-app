@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SetTimeView: View {
     @State private var selection = 0
-
     let selections = ["1", "2", "3", "4", "5"]
     var body: some View {
         Picker(selection: $selection, label: Text("時間の選択(分)")) {
@@ -18,7 +17,9 @@ struct SetTimeView: View {
             }
         }
         .labelsHidden()
+        .background(Color(UIColor.timerGray))
         .pickerStyle(WheelPickerStyle())
+        Text("\(selection + 1)分")
     }
 }
 
