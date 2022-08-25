@@ -36,7 +36,7 @@ class SetTimeViewController: UIViewController {
     }
 
     @objc func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        print("キャンセルボタンが押されました")
+        self.dismiss(animated: true, completion: nil)
     }
 
     @objc func preservationButtonPressed(_ sender: UIBarButtonItem) {
