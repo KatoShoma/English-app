@@ -36,11 +36,11 @@ class SetTimeViewController: UIViewController {
     }
 
     @objc func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        print("追加ボタンが押されました")
+        print("キャンセルボタンが押されました")
     }
 
     @objc func preservationButtonPressed(_ sender: UIBarButtonItem) {
-        print("削除ボタンが押されました")
+        print("保存ボタンが押されました")
     }
 
     required init?(coder: NSCoder) {
