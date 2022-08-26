@@ -19,6 +19,9 @@ struct SetTimeView: View {
         .labelsHidden()
         .background(Color(UIColor.timerGray))
         .pickerStyle(WheelPickerStyle())
+        VStack {
+            Spacer()
+        }
     }
 }
 
