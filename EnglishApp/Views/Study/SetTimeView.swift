@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct SetTimeView: View {
-    @State private var selection = 0
-    let selections = ["1分", "2分", "3分", "4分", "5分"]
+    final class Model: ObservableObject {
+        // デフォルトは3分に設定
+        @Published var time: Int? = 3
+    }
+
+    @ObservedObject var model = Model()
+    @State private var selection = 2
+
+    let selections: [String] = ["1分", "2分", "3分", "4分", "5分"]
     var body: some View {
         VStack {
             Picker(selection: $selection, label: Text("時間の選択(分)")) {
@@ -17,11 +24,19 @@ struct SetTimeView: View {
                     Text(self.selections[index])
                 }
             }
+            .onChange(of: selection) {newValue in
+                model.time = timeStringToNumber(timeString: selections[newValue])
+            }
             .labelsHidden()
             .background(Color(UIColor.timerGray))
             .pickerStyle(WheelPickerStyle())
             Spacer()
         }
+    }
+
+    func timeStringToNumber(timeString: String) -> Int {
+        let time: Int = Int(timeString.prefix(1))!
+        return time
     }
 }
 

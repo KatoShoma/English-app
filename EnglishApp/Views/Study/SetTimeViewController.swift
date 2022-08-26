@@ -9,9 +9,10 @@ import UIKit
 import SwiftUI
 
 class SetTimeViewController: UIViewController {
+    let hosting = UIHostingController(rootView: SetTimeView())
+
     required init() {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
-        let hosting = UIHostingController(rootView: SetTimeView())
         addChild(hosting)
         view.addSubview(hosting.view)
         hosting.didMove(toParent: self)
@@ -44,6 +45,10 @@ class SetTimeViewController: UIViewController {
     }
 
     @objc func preservationButtonPressed(_ sender: UIBarButtonItem) {
-        print("保存ボタンが押されました")
+        if let studyTime = self.hosting.rootView.model.time {
+            print(studyTime)
+        } else {
+            print("---")
+        }
     }
 }
