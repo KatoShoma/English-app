@@ -19,6 +19,10 @@ class SetTimeViewController: UIViewController {
         title = "時間の設定"
     }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // キャンセル・保存ボタン
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +45,5 @@ class SetTimeViewController: UIViewController {
 
     @objc func preservationButtonPressed(_ sender: UIBarButtonItem) {
         print("保存ボタンが押されました")
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
