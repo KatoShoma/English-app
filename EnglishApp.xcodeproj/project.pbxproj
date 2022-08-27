@@ -27,8 +27,10 @@
 		41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */; };
 		41CC157B28B5CA7800E23B7F /* OutcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */; };
 		41CC157D28B5CEE400E23B7F /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */; };
-		636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */; };
 		41CC157F28B6396400E23B7F /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157E28B6396400E23B7F /* URL+.swift */; };
+		636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */; };
+		636DFC8028B912D000E67CA1 /* RankAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DFC7F28B912D000E67CA1 /* RankAlertViewController.swift */; };
+		636DFC8228B912ED00E67CA1 /* RankAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DFC8128B912ED00E67CA1 /* RankAlertView.swift */; };
 		ADBC92F57256527EB184B280 /* Pods_EnglishApp_EnglishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238B741A2F0FAC17E98CED02 /* Pods_EnglishApp_EnglishAppUITests.framework */; };
 		C08A81E519C36D5E4FB43B4F /* Pods_EnglishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAB01E12F797134954BCCB /* Pods_EnglishApp.framework */; };
 		FDD5CE13115074CA26FB5B31 /* Pods_EnglishAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */; };
@@ -79,8 +81,10 @@
 		41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomePresenter.swift; sourceTree = "<group>"; };
 		41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
-		636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
 		41CC157E28B6396400E23B7F /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
+		636DFC7F28B912D000E67CA1 /* RankAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankAlertViewController.swift; sourceTree = "<group>"; };
+		636DFC8128B912ED00E67CA1 /* RankAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankAlertView.swift; sourceTree = "<group>"; };
 		8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B41848A4B3ACED4DF143CAC /* Pods-EnglishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishAppTests/Pods-EnglishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC8D0278582D3C82599ABCB7 /* Pods-EnglishApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishApp.release.xcconfig"; path = "Target Support Files/Pods-EnglishApp/Pods-EnglishApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				41C63A9728A5E71D001F2964 /* DataViewController.swift */,
+				636DFC7F28B912D000E67CA1 /* RankAlertViewController.swift */,
+				636DFC8128B912ED00E67CA1 /* RankAlertView.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -532,11 +538,13 @@
 				41C63A8E28A5E618001F2964 /* NavigationBarController.swift in Sources */,
 				41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */,
 				41C63A9628A5E6FB001F2964 /* OutcomeViewController.swift in Sources */,
+				636DFC8028B912D000E67CA1 /* RankAlertViewController.swift in Sources */,
 				41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */,
 				41CC157D28B5CEE400E23B7F /* SetTimeViewController.swift in Sources */,
 				41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */,
 				636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */,
 				41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */,
+				636DFC8228B912ED00E67CA1 /* RankAlertView.swift in Sources */,
 				41C63A9028A5E618001F2964 /* TabBarController.swift in Sources */,
 				41CC157F28B6396400E23B7F /* URL+.swift in Sources */,
 				41C63A8D28A5E618001F2964 /* SettingViewController.swift in Sources */,

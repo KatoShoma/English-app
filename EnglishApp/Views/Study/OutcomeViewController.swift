@@ -26,7 +26,7 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
 
         }
         hosting.rootView.model.showTimeSettingView = { [weak self] in
-            self?.present(UINavigationController(rootViewController: SetTimeViewController()), animated: true, completion: nil)
+            self?.present(UINavigationController(rootViewController: RankAlertViewController()), animated: true, completion: nil)
         }
     }
 
