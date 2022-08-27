@@ -7,10 +7,12 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class OutcomeViewController: UIViewController, UICollectionViewDelegate {
     let presenter: OutcomePresenter
     private let hosting = UIHostingController(rootView: OutcomeView())
+    private var cancellables: Set<AnyCancellable> = []
 
     required init?(coder: NSCoder) {
         self.presenter = OutcomePresenter()
@@ -26,8 +28,12 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
 
         }
         hosting.rootView.model.showTimeSettingView = { [weak self] in
-            self?.present(UINavigationController(rootViewController: SetTimeViewController()), animated: true, completion: nil)
+            self?.present(UINavigationController(rootViewController: SetTimeViewController(onChangeStudyTime: { [weak self] studyTime in
+                guard let self = self else { return }
+                self.presenter.studyTimeDidUpdate(time: studyTime)
+            })), animated: true, completion: nil)
         }
+        subscribePresenterSubjects()
     }
 
     func setupHierarchy() {
@@ -35,5 +41,13 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         self.view.addSubview(hosting.view)
         hosting.didMove(toParent: self)
         hosting.view.equalConstraintTo(view)
+    }
+
+    private func subscribePresenterSubjects() {
+        presenter.studyTime
+            .sink { [weak self] setTime in
+                self?.hosting.rootView.model.studyTime = setTime
+            }
+            .store(in: &cancellables)
     }
 }

@@ -36,10 +36,10 @@ struct OutcomeView: View {
                         VStack {
                             Text("")
                             Text("学習開始")
-                                .font(.title)
+                                .font(.system(size: 24))
                                 .foregroundColor(Color.white)
                             Spacer()
-                                .frame(height: 5)
+                                .frame(height: 7)
                             HStack {
                                 Group {
                                     Text("時間:")
