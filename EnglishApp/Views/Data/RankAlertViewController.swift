@@ -45,10 +45,11 @@ class RankAlertViewController: UIViewController {
     }
 
     @objc func preservationButtonPressed(_ sender: UIBarButtonItem) {
-        if let studyTime = self.hosting.rootView.model.time {
+        print("保存")
+        /*if let studyTime = self.hosting.rootView.model.time {
             print(studyTime)
         } else {
             print("---")
-        }
+        }*/
     }
 }
