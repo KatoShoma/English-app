@@ -62,6 +62,11 @@ final class SettingViewController: UIViewController, UICollectionViewDelegate {
         super.init(coder: coder)
     }
 
+    init() {
+        self.presenter = SettingPresenter()
+        super.init(nibName: nil, bundle: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "設定"

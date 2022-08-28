@@ -19,6 +19,11 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         super.init(coder: coder)
     }
 
+    init() {
+        self.presenter = OutcomePresenter()
+        super.init(nibName: nil, bundle: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "学習"
