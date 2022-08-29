@@ -20,9 +20,9 @@ class DataViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
-        let detailDataVC = OutcomeViewController()
-        let calenderVC = OutcomeViewController()
-        self.viewControllers = [detailDataVC, calenderVC]
+        let detailDataVC = DetailDataViewController()
+        let calendarVC = CalendarViewController()
+        self.viewControllers = [detailDataVC, calendarVC]
     }
 
     override func viewDidLoad() {

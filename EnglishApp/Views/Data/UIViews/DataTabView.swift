@@ -70,14 +70,14 @@ final class DataTabView: UIView {
         let underBar = UIView()
         addSubview(underBar)
         underBar.equalConstraintTo(self, targets: [.bottom])
-        underBar.backgroundColor = .lightBlack
+        underBar.backgroundColor = .pastelRed
         let underBarLeading = underBar.leadingAnchor.constraint(equalTo: leadingAnchor)
         underBarLeading.isActive = true
         underBarLeading.priority = .defaultLow
         underBarTrailingConstraint = underBar.trailingAnchor.constraint(equalTo: trailingAnchor) // 右寄せの場合
         underBarTrailingConstraint?.priority = .defaultHigh
         NSLayoutConstraint.activate([
-            underBar.heightAnchor.constraint(equalToConstant: 1),
+            underBar.heightAnchor.constraint(equalToConstant: 2),
             underBar.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5) // 幅
         ])
     }

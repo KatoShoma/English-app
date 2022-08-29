@@ -10,6 +10,10 @@
 		4169320228BB96D000C2686D /* DataTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169320128BB96D000C2686D /* DataTabView.swift */; };
 		4169320428BB9AB100C2686D /* DataTabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169320328BB9AB100C2686D /* DataTabContentView.swift */; };
 		4169320928BBA9F600C2686D /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169320828BBA9F600C2686D /* CGFloat+.swift */; };
+		4169320F28BCBE8100C2686D /* DetailDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169320E28BCBE8100C2686D /* DetailDataViewController.swift */; };
+		4169321128BCBE9E00C2686D /* DetailDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321028BCBE9E00C2686D /* DetailDataView.swift */; };
+		4169321528BCC0BE00C2686D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321428BCC0BE00C2686D /* CalendarView.swift */; };
+		4169321728BCC0F100C2686D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321628BCC0F100C2686D /* CalendarViewController.swift */; };
 		41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5328A5E5EE001F2964 /* AppDelegate.swift */; };
 		41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */; };
 		41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5728A5E5EE001F2964 /* ViewController.swift */; };
@@ -61,6 +65,10 @@
 		4169320128BB96D000C2686D /* DataTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabView.swift; sourceTree = "<group>"; };
 		4169320328BB9AB100C2686D /* DataTabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabContentView.swift; sourceTree = "<group>"; };
 		4169320828BBA9F600C2686D /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
+		4169320E28BCBE8100C2686D /* DetailDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataViewController.swift; sourceTree = "<group>"; };
+		4169321028BCBE9E00C2686D /* DetailDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataView.swift; sourceTree = "<group>"; };
+		4169321428BCC0BE00C2686D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		4169321628BCC0F100C2686D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		41C63A5028A5E5EE001F2964 /* EnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C63A5328A5E5EE001F2964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +245,10 @@
 			isa = PBXGroup;
 			children = (
 				41C63A9728A5E71D001F2964 /* DataViewController.swift */,
+				4169320E28BCBE8100C2686D /* DetailDataViewController.swift */,
+				4169321028BCBE9E00C2686D /* DetailDataView.swift */,
+				4169321628BCC0F100C2686D /* CalendarViewController.swift */,
+				4169321428BCC0BE00C2686D /* CalendarView.swift */,
 				4169320028BB96A500C2686D /* UIViews */,
 			);
 			path = Data;
@@ -545,7 +557,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4169320228BB96D000C2686D /* DataTabView.swift in Sources */,
+				4169321128BCBE9E00C2686D /* DetailDataView.swift in Sources */,
+				4169321528BCC0BE00C2686D /* CalendarView.swift in Sources */,
 				41CC156A28B4AC4F00E23B7F /* OutcomeView.swift in Sources */,
+				4169321728BCC0F100C2686D /* CalendarViewController.swift in Sources */,
 				41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */,
 				41C63A8E28A5E618001F2964 /* NavigationBarController.swift in Sources */,
 				41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */,
@@ -557,6 +572,7 @@
 				4169320428BB9AB100C2686D /* DataTabContentView.swift in Sources */,
 				41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */,
 				4169320928BBA9F600C2686D /* CGFloat+.swift in Sources */,
+				4169320F28BCBE8100C2686D /* DetailDataViewController.swift in Sources */,
 				41C63A9028A5E618001F2964 /* TabBarController.swift in Sources */,
 				41CC157F28B6396400E23B7F /* URL+.swift in Sources */,
 				41C63A8D28A5E618001F2964 /* SettingViewController.swift in Sources */,
