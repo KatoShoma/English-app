@@ -7,48 +7,122 @@
 
 import UIKit
 
-class DataViewController: UIViewController, UICollectionViewDelegate {
+class DataViewController: UIViewController {
+    private let pageViewController = UIPageViewController(
+        transitionStyle: .scroll,
+        navigationOrientation: .horizontal,
+        options: nil
+    )
 
-    private var collectionView: UICollectionView!
-    private var collectionViewLayout: UICollectionViewLayout {
-        UICollectionViewCompositionalLayout { _, layoutEnvironment in
-            var configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
-            configuration.headerMode = .supplementary
-            configuration.backgroundColor = .white
-            let section = NSCollectionLayoutSection.list(
-                using: configuration,
-                layoutEnvironment: layoutEnvironment
-            )
-            return section
-        }
+    private let tabView = DataTabView()
+    private var viewControllers: [UIViewController] = []
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        let detailDataVC = DetailDataViewController()
+        let calendarVC = CalendarViewController()
+        self.viewControllers = [detailDataVC, calendarVC]
     }
-
-    let titleLabel: UILabel = {
-        let view = UILabel.init()
-        view.text = "スクリーン2"
-        view.translatesAutoresizingMaskIntoConstraints = false // NSLayoutConstraintの利用に必要
-        return view
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "記録"
         navigationItem.largeTitleDisplayMode = .never
+        view.backgroundColor = .white
         setupHierarchy()
     }
 
     private func setupHierarchy() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(collectionView)
-        collectionView.delegate = self
+        view.addSubview(tabView)
+        tabView.equalConstraintTo(view, targets: [.leading, .trailing])
+        tabView.backgroundColor = .systemBackground
+        tabView.onChange = .init { [weak self] selected in
+            guard let self = self, let direction = self.direction(nextIndex: selected.rawValue)
+            else {
+                return
+            }
+            self.pageViewController.setViewControllers( // 表示するViewControllerの設定
+                [self.viewControllers[selected.rawValue]],
+                direction: direction,
+                animated: true,
+                completion: nil
+            )
+        }
 
-        view.addSubview(titleLabel)
+        setupPageViewController()
 
         NSLayoutConstraint.activate([
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            tabView.heightAnchor.constraint(equalToConstant: 60),
+            tabView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            pageViewController.view.topAnchor.constraint(equalTo: tabView.bottomAnchor)
         ])
     }
 
+    private func setupPageViewController() {
+        addChild(pageViewController) // DataViewControllerの子要素にpageViewControllerを指定
+        view.addSubview(pageViewController.view)
+        pageViewController.view.equalConstraintTo(view, targets: [.leading, .trailing, .bottom])
+        pageViewController.didMove(toParent: self)
+        pageViewController.delegate = self
+        pageViewController.dataSource = self
+        pageViewController.setViewControllers( // 初期設定
+            [viewControllers[0]],
+            direction: .forward,
+            animated: true,
+            completion: nil
+        )
+    }
+
+    private func direction(nextIndex: Int) -> UIPageViewController.NavigationDirection? {
+        guard let currentVC = pageViewController.viewControllers?.first else {
+            return nil
+        }
+        guard let currentIndex = viewControllers.firstIndex(of: currentVC) else {
+            return nil
+        }
+        if currentIndex < nextIndex { // 次のページに
+            return .forward
+        }
+        return .reverse // 前のページに
+    }
+}
+
+extension DataViewController: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = viewControllers.firstIndex(of: viewController) else {
+            return nil
+        }
+        let beforeIndex = currentIndex - 1
+        guard beforeIndex >= 0 else {
+            return nil
+        }
+        return viewControllers[beforeIndex]
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = viewControllers.firstIndex(of: viewController) else {
+            return nil
+        }
+        let afterIndex = currentIndex + 1
+        guard afterIndex < viewControllers.count else {
+            return nil
+        }
+        return viewControllers[afterIndex]
+    }
+}
+
+extension DataViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            didFinishAnimating finished: Bool,
+                            previousViewControllers: [UIViewController],
+                            transitionCompleted completed: Bool) {
+        guard let currentVC = pageViewController.viewControllers?.first else {
+            return
+        }
+        guard let index = viewControllers.firstIndex(of: currentVC) else { return }
+        tabView.selectedTab = .init(rawValue: index)!
+    }
 }
