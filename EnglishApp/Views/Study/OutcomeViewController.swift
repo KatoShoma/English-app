@@ -29,8 +29,10 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         title = "学習"
         setupHierarchy()
 
-        hosting.rootView.model.startLearning = {
-
+        let studyVC = UINavigationController(rootViewController: StudyViewController())
+        studyVC.modalPresentationStyle = .fullScreen
+        hosting.rootView.model.startLearning = { [weak self] in
+            self?.present(studyVC, animated: false, completion: nil)
         }
         hosting.rootView.model.showTimeSettingView = { [weak self] in
             self?.present(UINavigationController(rootViewController: SetTimeViewController(onChangeStudyTime: { [weak self] studyTime in

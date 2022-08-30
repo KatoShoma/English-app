@@ -14,6 +14,8 @@
 		4169321128BCBE9E00C2686D /* DetailDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321028BCBE9E00C2686D /* DetailDataView.swift */; };
 		4169321528BCC0BE00C2686D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321428BCC0BE00C2686D /* CalendarView.swift */; };
 		4169321728BCC0F100C2686D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321628BCC0F100C2686D /* CalendarViewController.swift */; };
+		4169321928BE5A8000C2686D /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321828BE5A8000C2686D /* StudyViewController.swift */; };
+		4169321B28BE5B9500C2686D /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321A28BE5B9500C2686D /* StudyView.swift */; };
 		41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5328A5E5EE001F2964 /* AppDelegate.swift */; };
 		41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */; };
 		41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5728A5E5EE001F2964 /* ViewController.swift */; };
@@ -69,6 +71,8 @@
 		4169321028BCBE9E00C2686D /* DetailDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataView.swift; sourceTree = "<group>"; };
 		4169321428BCC0BE00C2686D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4169321628BCC0F100C2686D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4169321828BE5A8000C2686D /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		4169321A28BE5B9500C2686D /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		41C63A5028A5E5EE001F2964 /* EnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C63A5328A5E5EE001F2964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,10 +236,12 @@
 		41CC156528B139DA00E23B7F /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				41CC156928B4AC4F00E23B7F /* OutcomeView.swift */,
 				41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */,
+				41CC156928B4AC4F00E23B7F /* OutcomeView.swift */,
 				41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */,
 				636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */,
+				4169321828BE5A8000C2686D /* StudyViewController.swift */,
+				4169321A28BE5B9500C2686D /* StudyView.swift */,
 				41CC156D28B51A1200E23B7F /* UIViews */,
 			);
 			path = Study;
@@ -560,6 +566,7 @@
 				4169321128BCBE9E00C2686D /* DetailDataView.swift in Sources */,
 				4169321528BCC0BE00C2686D /* CalendarView.swift in Sources */,
 				41CC156A28B4AC4F00E23B7F /* OutcomeView.swift in Sources */,
+				4169321928BE5A8000C2686D /* StudyViewController.swift in Sources */,
 				4169321728BCC0F100C2686D /* CalendarViewController.swift in Sources */,
 				41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */,
 				41C63A8E28A5E618001F2964 /* NavigationBarController.swift in Sources */,
@@ -579,6 +586,7 @@
 				41C63A8F28A5E618001F2964 /* UIColor+.swift in Sources */,
 				41C63A9828A5E71D001F2964 /* DataViewController.swift in Sources */,
 				41CC157B28B5CA7800E23B7F /* OutcomePresenter.swift in Sources */,
+				4169321B28BE5B9500C2686D /* StudyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
