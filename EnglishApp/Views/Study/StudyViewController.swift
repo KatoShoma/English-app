@@ -12,8 +12,9 @@ class StudyViewController: UIViewController {
 
     let hosting = UIHostingController(rootView: StudyView())
 
-    required init() {
+    required init(studyMinute: Int) {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+        hosting.rootView.model.times = studyMinute * 60
     }
 
     required init?(coder: NSCoder) {
@@ -25,6 +26,10 @@ class StudyViewController: UIViewController {
 
         setupHierarchy()
         setupNavigationBar()
+
+        hosting.rootView.model.studied = {
+            // Presenterで画面遷移のロジックを定義
+        }
     }
 
     func setupHierarchy() {

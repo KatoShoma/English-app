@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct StudyView: View {
+    final class Model: ObservableObject {
+        @Published var times: Int?
+        var studied: (() -> Void)?
+    }
+
+    @ObservedObject var model = Model()
+    @ObservedObject var timerManager = TimerManager()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(timerManager.timeLabel)
+                .font(.system(size: 50))
+                .onViewDidLoad {
+                    guard let time = model.times else { return }
+                    self.timerManager.start(studyTime: time)
+                }
+                .onChange(of: timerManager.time) { value in
+                    if value == 0 {
+                        model.studied?()
+                    }
+                }
+        }
     }
 }
 
