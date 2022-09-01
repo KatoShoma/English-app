@@ -12,6 +12,7 @@ struct DetailDataView: View {
         @Published var rank: String = "ブロンズ"
         @Published var rankColor: UIColor = .bronze
         @Published var weakWord: [String]?
+        var showDetailDataView: (() -> Void)?
     }
 
     @ObservedObject var model = Model()
@@ -20,7 +21,7 @@ struct DetailDataView: View {
         Spacer()
         GeometryReader { geometry in
             let height = geometry.size.height
-            VStack {
+            VStack(alignment: .trailing) {
                 (Text(self.model.rank)
                     .font(.system(size: 24))
                     .foregroundColor(Color(UIColor.lightBlack))
@@ -33,6 +34,14 @@ struct DetailDataView: View {
                 )
                 .background(Color(self.model.rankColor).cornerRadius(6))
                 .frame(maxWidth: .infinity, minHeight: CGFloat(height)/12)
+                Button(
+                    action: { model.showDetailDataView?() },
+                    label: {
+                        Text("ランクとは？")
+                            .foregroundColor(Color(UIColor.lightBlue))
+                            .padding(.trailing, 16)
+                    }
+                )
             }
         }
     }
