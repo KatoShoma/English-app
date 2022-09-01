@@ -9,29 +9,31 @@ import SwiftUI
 
 struct DetailDataView: View {
     final class Model: ObservableObject {
-        @Published var rank: String?
-        @Published var rankColor: Color?
+        @Published var rank: String = "ブロンズ"
+        @Published var rankColor: UIColor = .bronze
         @Published var weakWord: [String]?
     }
 
+    @ObservedObject var model = Model()
+
     var body: some View {
+        Spacer()
         GeometryReader { geometry in
             let height = geometry.size.height
             VStack {
-                (Text("ランク")
+                (Text(self.model.rank)
                     .font(.system(size: 24))
                     .foregroundColor(Color(UIColor.lightBlack))
                     .padding(EdgeInsets(
                         top: 24,
-                        leading: 146,
+                        leading: 132,
                         bottom: 24,
-                        trailing: 146
+                        trailing: 132
                     ))
                 )
-                .background(Color(UIColor.gold).cornerRadius(6))
+                .background(Color(self.model.rankColor).cornerRadius(6))
                 .frame(maxWidth: .infinity, minHeight: CGFloat(height)/12)
             }
-            Spacer()
         }
     }
 }
