@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @State var date = Date()
+
     var body: some View {
-        Text("日別カレンダー")
+        VStack {
+            DatePicker(selection: $date, displayedComponents: .date, label: { Text("日付") })
+                .datePickerStyle(GraphicalDatePickerStyle())
+            Spacer()
+        }
     }
 }
 
