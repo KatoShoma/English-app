@@ -25,7 +25,7 @@ class TimerManager: ObservableObject {
                 return
             }
             self.time -= 1
-            self.timeLabel = self.secondsToMinutesAndSeconds(seconds: self.time)
+            self.timeLabel = self.secondsToMinutesAndSeconds(seconds: self.time) // 分:秒の形で指定
         })
     }
 
