@@ -18,32 +18,25 @@ struct DetailDataView: View {
     @ObservedObject var model = Model()
 
     var body: some View {
-        Spacer()
-        GeometryReader { geometry in
-            let height = geometry.size.height
-            VStack(alignment: .trailing) {
-                (Text(self.model.rank)
-                    .font(.system(size: 24))
-                    .foregroundColor(Color(UIColor.lightBlack))
-                    .padding(EdgeInsets(
-                        top: 24,
-                        leading: 132,
-                        bottom: 24,
-                        trailing: 132
-                    ))
-                )
+        VStack {
+            Text(self.model.rank)
+                .font(.system(size: 20))
+                .foregroundColor(Color(UIColor.lightBlack))
+                .frame(maxWidth: .infinity, minHeight: 72)
                 .background(Color(self.model.rankColor).cornerRadius(6))
-                .frame(maxWidth: .infinity, minHeight: CGFloat(height)/12)
-                Button(
-                    action: { model.showDetailDataView?() },
-                    label: {
-                        Text("ランクとは？")
-                            .foregroundColor(Color(UIColor.lightBlue))
-                            .padding(.trailing, 16)
-                    }
-                )
-            }
+                .padding(.horizontal, 12)
+                .padding(.top, 12)
+            Button(
+                action: { model.showDetailDataView?() },
+                label: {
+                    Text("ランクとは？")
+                        .foregroundColor(Color(UIColor.lightBlue))
+                        .padding(.trailing, 16)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+            )
         }
+        Spacer()
     }
 }
 
