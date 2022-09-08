@@ -89,7 +89,7 @@ struct DetailDataView: View {
             Text("\(self.model.num)問")
                 .font(.system(size: 24))
                 .foregroundColor(Color(UIColor.lightBlack))
-            }
+        }
         Spacer()
     }
 }
