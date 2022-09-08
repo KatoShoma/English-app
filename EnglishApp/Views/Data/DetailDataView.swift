@@ -22,7 +22,7 @@ struct DetailDataView: View {
             Text(self.model.rank)
                 .font(.system(size: 20))
                 .foregroundColor(Color(UIColor.lightBlack))
-                .frame(maxWidth: .infinity, minHeight: 72)
+                .frame(maxWidth: .infinity, minHeight: 60)
                 .background(Color(self.model.rankColor).cornerRadius(6))
                 .padding(.horizontal, 12)
                 .padding(.top, 12)
