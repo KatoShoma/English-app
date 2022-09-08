@@ -11,8 +11,8 @@ struct DetailDataView: View {
     final class Model: ObservableObject {
         @Published var rank: String = "ブロンズ"
         @Published var rankColor: UIColor = .bronze
-        @Published var weakWord: [String] = ["Happy", "Sad", "Smile"]
-        @Published var num: Int = 5
+        @Published var weakWord: [String]? = ["Happy", "Sad", "Smile"]
+        @Published var num: Int? = 5
         var showDetailDataView: (() -> Void)?
     }
 
@@ -50,7 +50,7 @@ struct DetailDataView: View {
                         .frame(maxWidth: .infinity, minHeight: 48)
                         .background(Color(UIColor.rankCream).cornerRadius(25))
                         .clipShape(Circle())
-                    Text(self.model.weakWord[0])
+                    Text((self.model.weakWord?[0])!)
                         .font(.system(size: 24))
                         .foregroundColor(Color(UIColor.lightBlack))
                         .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
@@ -62,7 +62,7 @@ struct DetailDataView: View {
                         .frame(maxWidth: .infinity, minHeight: 48)
                         .background(Color(UIColor.rankCream).cornerRadius(25))
                         .clipShape(Circle())
-                    Text(self.model.weakWord[1])
+                    Text((self.model.weakWord?[1])!)
                         .font(.system(size: 24))
                         .foregroundColor(Color(UIColor.lightBlack))
                         .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
@@ -74,7 +74,7 @@ struct DetailDataView: View {
                         .frame(maxWidth: .infinity, minHeight: 48)
                         .background(Color(UIColor.rankCream).cornerRadius(25))
                         .clipShape(Circle())
-                    Text(self.model.weakWord[2])
+                    Text((self.model.weakWord?[2])!)
                         .font(.system(size: 24))
                         .foregroundColor(Color(UIColor.lightBlack))
                         .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
@@ -123,7 +123,7 @@ struct DetailDataView: View {
                 .foregroundColor(Color(UIColor.lightBlack))
                 .font(.system(size: 16))
             Divider()
-            Text("\(self.model.num)問")
+            Text("\(self.model.num!)問")
                 .font(.system(size: 24))
                 .foregroundColor(Color(UIColor.lightBlack))
         }
