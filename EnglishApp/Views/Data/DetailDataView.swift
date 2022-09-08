@@ -11,7 +11,10 @@ struct DetailDataView: View {
     final class Model: ObservableObject {
         @Published var rank: String = "ブロンズ"
         @Published var rankColor: UIColor = .bronze
-        @Published var weakWord: [String]?
+        @Published var weakWord1: String = "---"
+        @Published var weakWord2: String = "---"
+        @Published var weakWord3: String = "---"
+        @Published var num: Int = 0
         var showDetailDataView: (() -> Void)?
     }
 
@@ -35,7 +38,58 @@ struct DetailDataView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
             )
-        }
+            Spacer().frame(height: 48)
+            Text("苦手単語")
+                .foregroundColor(Color(UIColor.lightBlack))
+                .font(.system(size: 16))
+            Divider()
+            HStack {
+                VStack(spacing: 24) {
+                    Spacer().frame(height: 6)
+                    Text("1")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(UIColor.lightBlack))
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(Color(UIColor.rankCream).cornerRadius(25))
+                        .clipShape(Circle())
+                    Text("2")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(UIColor.lightBlack))
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(Color(UIColor.rankCream).cornerRadius(25))
+                        .clipShape(Circle())
+                    Text("3")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(UIColor.lightBlack))
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(Color(UIColor.rankCream).cornerRadius(25))
+                        .clipShape(Circle())
+                }
+                VStack(spacing: 24) {
+                    Spacer().frame(height: 6)
+                    Text(self.model.weakWord1)
+                        .font(.system(size: 24))
+                        .foregroundColor(Color(UIColor.lightBlack))
+                        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                    Text(self.model.weakWord2)
+                        .font(.system(size: 24))
+                        .foregroundColor(Color(UIColor.lightBlack))
+                        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                    Text(self.model.weakWord3)
+                        .font(.system(size: 24))
+                        .foregroundColor(Color(UIColor.lightBlack))
+                        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                }
+            }
+            Spacer().frame(height: 48)
+            Text("最高正解数")
+                .foregroundColor(Color(UIColor.lightBlack))
+                .font(.system(size: 16))
+            Divider()
+            Text("\(self.model.num)問")
+                .font(.system(size: 24))
+                .foregroundColor(Color(UIColor.lightBlack))
+            }
         Spacer()
     }
 }
