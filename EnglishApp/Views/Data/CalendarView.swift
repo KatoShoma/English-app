@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CalendarView: View {
-    class AppDelegate: UIResponder, UIApplicationDelegate {
+    class CalendarDay: UIResponder, UIApplicationDelegate {
         let year: Int = Calendar.current.component(.year, from: Date())
         let month: Int = Calendar.current.component(.month, from: Date())
     }
 
-    @State var year: Int = AppDelegate().year
-    @State var month: Int = AppDelegate().month
+    @State var year: Int = CalendarDay().year
+    @State var month: Int = CalendarDay().month
 
     let dayofweek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
@@ -158,7 +158,7 @@ struct CalendarList: View {
         VStack {
             HStack {
                 if self.startdaynumber != 0 {
-                    ForEach(0..<self.startdaynumber, id: \.self) { index in
+                    ForEach(0..<self.startdaynumber, id: \.self) { _ in
                         ZStack {
                             RoundedRectangle(cornerRadius: 5).frame(width: 40, height: 40)
                                 .foregroundColor(Color.clear)
