@@ -11,12 +11,28 @@ struct DetailDataView: View {
     final class Model: ObservableObject {
         @Published var rank: String = "ブロンズ"
         @Published var rankColor: UIColor = .bronze
-        @Published var weakWord: [String] = ["Happy", "Sad", "Smile"]
-        @Published var num: Int? = 5
+        @Published var weakWords: [String?] = [nil, nil, nil]
+        @Published var bestCorrectAnswer: Int?
         var showDetailDataView: (() -> Void)?
     }
 
     @ObservedObject var model = Model()
+
+    func getweakWord(index: Int) -> String {
+        if let weakWord = model.weakWords[index] {
+            return weakWord
+        } else {
+            return "---"
+        }
+    }
+
+    func getCorrectAnswer() -> Int {
+        if let correctAnswer = model.bestCorrectAnswer {
+            return Int(correctAnswer)
+        } else {
+            return 0
+        }
+    }
 
     var body: some View {
         VStack {
@@ -65,15 +81,15 @@ struct DetailDataView: View {
                 }
                 VStack(spacing: 24) {
                     Spacer().frame(height: 6)
-                    Text(self.model.weakWord[0])
+                    Text(getweakWord(index: 0))
                         .font(.system(size: 24))
                         .foregroundColor(Color(UIColor.lightBlack))
                         .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
-                    Text(self.model.weakWord[1])
+                    Text(getweakWord(index: 1))
                         .font(.system(size: 24))
                         .foregroundColor(Color(UIColor.lightBlack))
                         .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
-                    Text(self.model.weakWord[2])
+                    Text(getweakWord(index: 2))
                         .font(.system(size: 24))
                         .foregroundColor(Color(UIColor.lightBlack))
                         .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
@@ -84,7 +100,7 @@ struct DetailDataView: View {
                 .foregroundColor(Color(UIColor.lightBlack))
                 .font(.system(size: 16))
             Divider()
-            Text("\(self.model.num!)問")
+            Text("\(getCorrectAnswer())問")
                 .font(.system(size: 24))
                 .foregroundColor(Color(UIColor.lightBlack))
         }
