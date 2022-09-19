@@ -13,6 +13,20 @@ struct CalendarView: View {
         let month: Int = Calendar.current.component(.month, from: Date())
     }
 
+    final class Model: ObservableObject {
+        @Published var studyDay: Int?
+    }
+
+    @ObservedObject var model = Model()
+
+    private func studyColor(day: Int) -> Color {
+        if day == model.studyDay {
+            return Color(UIColor.pastelRed)
+        } else {
+            return Color(UIColor.lightBlack)
+        }
+    }
+
     @State var year: Int = CalendarDay().year
     @State var month: Int = CalendarDay().month
 
@@ -247,7 +261,7 @@ struct CalendarList: View {
                                     .foregroundColor(.black)
                             }
                         }
-                        ForEach(0..<(7-self.lastweeknumber), id: \.self) { index in
+                        ForEach(0..<(7-self.lastweeknumber), id: \.self) { _ in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5).frame(width: 40, height: 40)
                                     .foregroundColor(Color.clear)
@@ -305,7 +319,7 @@ struct CalendarList: View {
                             }
                         }
                         if self.lastweeknumber != 0 {
-                            ForEach(0..<(7-self.lastweeknumber), id: \.self) {index in
+                            ForEach(0..<(7-self.lastweeknumber), id: \.self) { _ in
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 5).frame(width: 40, height: 40)
                                         .foregroundColor(Color.clear)
