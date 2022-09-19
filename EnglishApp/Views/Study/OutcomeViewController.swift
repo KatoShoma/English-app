@@ -29,8 +29,15 @@ class OutcomeViewController: UIViewController, UICollectionViewDelegate {
         title = "学習"
         setupHierarchy()
 
-        hosting.rootView.model.startLearning = {
-
+        hosting.rootView.model.startLearning = { [weak self] in
+            guard let self = self else { return }
+            if let studyTime = self.presenter.studyTime.value {
+                let studyVC = UINavigationController(rootViewController: StudyViewController(studyMinute: studyTime))
+                studyVC.modalPresentationStyle = .fullScreen
+                self.present(studyVC, animated: false, completion: nil)
+            } else {
+                // NOTE: 時間を設定してくださいアラートの表示
+            }
         }
         hosting.rootView.model.showTimeSettingView = { [weak self] in
             self?.present(UINavigationController(rootViewController: SetTimeViewController(onChangeStudyTime: { [weak self] studyTime in

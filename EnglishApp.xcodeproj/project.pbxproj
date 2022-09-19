@@ -14,6 +14,14 @@
 		4169321128BCBE9E00C2686D /* DetailDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321028BCBE9E00C2686D /* DetailDataView.swift */; };
 		4169321528BCC0BE00C2686D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321428BCC0BE00C2686D /* CalendarView.swift */; };
 		4169321728BCC0F100C2686D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321628BCC0F100C2686D /* CalendarViewController.swift */; };
+		4169321928BE5A8000C2686D /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321828BE5A8000C2686D /* StudyViewController.swift */; };
+		4169321B28BE5B9500C2686D /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169321A28BE5B9500C2686D /* StudyView.swift */; };
+		4169322228BF3C5200C2686D /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169322128BF3C5200C2686D /* TimerManager.swift */; };
+		4169322428BF410000C2686D /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169322328BF410000C2686D /* View+.swift */; };
+		41A42BD728D2130900B125F0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A42BD628D2130900B125F0 /* Issue.swift */; };
+		41A42BD928D8679E00B125F0 /* StudyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A42BD828D8679E00B125F0 /* StudyResultViewController.swift */; };
+		41A42BDB28D868D400B125F0 /* StudyResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A42BDA28D868D400B125F0 /* StudyResultView.swift */; };
+		41A42BDD28D86B9300B125F0 /* StudyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A42BDC28D86B9300B125F0 /* StudyPresenter.swift */; };
 		41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5328A5E5EE001F2964 /* AppDelegate.swift */; };
 		41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */; };
 		41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C63A5728A5E5EE001F2964 /* ViewController.swift */; };
@@ -35,6 +43,9 @@
 		41CC157B28B5CA7800E23B7F /* OutcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */; };
 		41CC157D28B5CEE400E23B7F /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */; };
 		41CC157F28B6396400E23B7F /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC157E28B6396400E23B7F /* URL+.swift */; };
+		41F7782F28CF75F7007101D2 /* SUChoicesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7782E28CF75F7007101D2 /* SUChoicesButton.swift */; };
+		41F7783128CF7C8E007101D2 /* ChoicesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7783028CF7C8E007101D2 /* ChoicesButton.swift */; };
+		41F7783328CF80B9007101D2 /* UILayoutPriority+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7783228CF80B9007101D2 /* UILayoutPriority+.swift */; };
 		636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */; };
 		ADBC92F57256527EB184B280 /* Pods_EnglishApp_EnglishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238B741A2F0FAC17E98CED02 /* Pods_EnglishApp_EnglishAppUITests.framework */; };
 		C08A81E519C36D5E4FB43B4F /* Pods_EnglishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAB01E12F797134954BCCB /* Pods_EnglishApp.framework */; };
@@ -69,6 +80,14 @@
 		4169321028BCBE9E00C2686D /* DetailDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataView.swift; sourceTree = "<group>"; };
 		4169321428BCC0BE00C2686D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4169321628BCC0F100C2686D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4169321828BE5A8000C2686D /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		4169321A28BE5B9500C2686D /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
+		4169322128BF3C5200C2686D /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		4169322328BF410000C2686D /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		41A42BD628D2130900B125F0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		41A42BD828D8679E00B125F0 /* StudyResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyResultViewController.swift; sourceTree = "<group>"; };
+		41A42BDA28D868D400B125F0 /* StudyResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyResultView.swift; sourceTree = "<group>"; };
+		41A42BDC28D86B9300B125F0 /* StudyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPresenter.swift; sourceTree = "<group>"; };
 		41C63A5028A5E5EE001F2964 /* EnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C63A5328A5E5EE001F2964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C63A5528A5E5EE001F2964 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +113,9 @@
 		41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomePresenter.swift; sourceTree = "<group>"; };
 		41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		41CC157E28B6396400E23B7F /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		41F7782E28CF75F7007101D2 /* SUChoicesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChoicesButton.swift; sourceTree = "<group>"; };
+		41F7783028CF7C8E007101D2 /* ChoicesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesButton.swift; sourceTree = "<group>"; };
+		41F7783228CF80B9007101D2 /* UILayoutPriority+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutPriority+.swift"; sourceTree = "<group>"; };
 		636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
 		8A74B29BDC8FA1F550E87377 /* Pods_EnglishAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B41848A4B3ACED4DF143CAC /* Pods-EnglishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishAppTests/Pods-EnglishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +160,15 @@
 				4169320328BB9AB100C2686D /* DataTabContentView.swift */,
 			);
 			path = UIViews;
+			sourceTree = "<group>";
+		};
+		4169322028BF3C2600C2686D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4169322128BF3C5200C2686D /* TimerManager.swift */,
+				41A42BD628D2130900B125F0 /* Issue.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		41C63A4728A5E5EE001F2964 = {
@@ -198,6 +229,7 @@
 		41C63A8528A5E618001F2964 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4169322028BF3C2600C2686D /* Models */,
 				41CC157328B5221E00E23B7F /* Components */,
 				41CC156728B13A0E00E23B7F /* Setting */,
 				41CC156628B139EB00E23B7F /* Data */,
@@ -216,6 +248,8 @@
 				41CC156B28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift */,
 				41CC157E28B6396400E23B7F /* URL+.swift */,
 				4169320828BBA9F600C2686D /* CGFloat+.swift */,
+				4169322328BF410000C2686D /* View+.swift */,
+				41F7783228CF80B9007101D2 /* UILayoutPriority+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,6 +259,7 @@
 			children = (
 				41C63A9C28A68A29001F2964 /* SettingPresenter.swift */,
 				41CC157A28B5CA7800E23B7F /* OutcomePresenter.swift */,
+				41A42BDC28D86B9300B125F0 /* StudyPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -232,10 +267,14 @@
 		41CC156528B139DA00E23B7F /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				41CC156928B4AC4F00E23B7F /* OutcomeView.swift */,
 				41C63A9528A5E6FB001F2964 /* OutcomeViewController.swift */,
+				41CC156928B4AC4F00E23B7F /* OutcomeView.swift */,
 				41CC157C28B5CEE400E23B7F /* SetTimeViewController.swift */,
 				636DFC7B28B5F79000E67CA1 /* SetTimeView.swift */,
+				4169321828BE5A8000C2686D /* StudyViewController.swift */,
+				4169321A28BE5B9500C2686D /* StudyView.swift */,
+				41A42BD828D8679E00B125F0 /* StudyResultViewController.swift */,
+				41A42BDA28D868D400B125F0 /* StudyResultView.swift */,
 				41CC156D28B51A1200E23B7F /* UIViews */,
 			);
 			path = Study;
@@ -272,6 +311,8 @@
 		41CC157328B5221E00E23B7F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				41F7782E28CF75F7007101D2 /* SUChoicesButton.swift */,
+				41F7783028CF7C8E007101D2 /* ChoicesButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -556,29 +597,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F7783128CF7C8E007101D2 /* ChoicesButton.swift in Sources */,
+				41A42BD728D2130900B125F0 /* Issue.swift in Sources */,
 				4169320228BB96D000C2686D /* DataTabView.swift in Sources */,
 				4169321128BCBE9E00C2686D /* DetailDataView.swift in Sources */,
 				4169321528BCC0BE00C2686D /* CalendarView.swift in Sources */,
 				41CC156A28B4AC4F00E23B7F /* OutcomeView.swift in Sources */,
+				4169322428BF410000C2686D /* View+.swift in Sources */,
+				4169321928BE5A8000C2686D /* StudyViewController.swift in Sources */,
+				4169322228BF3C5200C2686D /* TimerManager.swift in Sources */,
 				4169321728BCC0F100C2686D /* CalendarViewController.swift in Sources */,
+				41A42BDB28D868D400B125F0 /* StudyResultView.swift in Sources */,
 				41C63A5828A5E5EE001F2964 /* ViewController.swift in Sources */,
 				41C63A8E28A5E618001F2964 /* NavigationBarController.swift in Sources */,
 				41C63A5428A5E5EE001F2964 /* AppDelegate.swift in Sources */,
 				41C63A9628A5E6FB001F2964 /* OutcomeViewController.swift in Sources */,
+				41F7783328CF80B9007101D2 /* UILayoutPriority+.swift in Sources */,
 				41C63A5628A5E5EE001F2964 /* SceneDelegate.swift in Sources */,
 				41CC157D28B5CEE400E23B7F /* SetTimeViewController.swift in Sources */,
+				41A42BD928D8679E00B125F0 /* StudyResultViewController.swift in Sources */,
 				41CC156C28B4B36600E23B7F /* UIView+NSLayoutConstraint.swift in Sources */,
 				636DFC7C28B5F79000E67CA1 /* SetTimeView.swift in Sources */,
 				4169320428BB9AB100C2686D /* DataTabContentView.swift in Sources */,
 				41C63A9D28A68A29001F2964 /* SettingPresenter.swift in Sources */,
+				41F7782F28CF75F7007101D2 /* SUChoicesButton.swift in Sources */,
 				4169320928BBA9F600C2686D /* CGFloat+.swift in Sources */,
 				4169320F28BCBE8100C2686D /* DetailDataViewController.swift in Sources */,
+				41A42BDD28D86B9300B125F0 /* StudyPresenter.swift in Sources */,
 				41C63A9028A5E618001F2964 /* TabBarController.swift in Sources */,
 				41CC157F28B6396400E23B7F /* URL+.swift in Sources */,
 				41C63A8D28A5E618001F2964 /* SettingViewController.swift in Sources */,
 				41C63A8F28A5E618001F2964 /* UIColor+.swift in Sources */,
 				41C63A9828A5E71D001F2964 /* DataViewController.swift in Sources */,
 				41CC157B28B5CA7800E23B7F /* OutcomePresenter.swift in Sources */,
+				4169321B28BE5B9500C2686D /* StudyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
